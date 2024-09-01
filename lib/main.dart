@@ -1,5 +1,4 @@
 
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -40,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
+        centerTitle: true,
       ),
       body: Center(
         child: Column(
@@ -69,21 +69,48 @@ class _MyHomePageState extends State<MyHomePage> {
             //         ),
 
             children: <Widget>[
-              RichText(
-                text: const TextSpan(
-                    text: 'Balance\n',
+              Container(
+                width: 500,
+                height:500,
+                color: Colors.red,
+                child: Image.asset(
+                  'images/ade.jpg',
+                  fit: BoxFit.cover,
+                  
+                  errorBuilder: (context, error, stackTrace) {
+                    return  Text('NO SUCH IMAGE!!!!',
                     style: TextStyle(
+                      // color: Colors.red,
                       fontSize: 20,
-                      color: Colors.black87,
+                      // fontWeight: FontWeight.bold,
+                       foreground: Paint()
+                                         ..color = Colors.red
+                                        ..strokeWidth = 2
+                                        ..style = PaintingStyle.stroke
                     ),
-                    children: [
-                      TextSpan(
-                          text: '£1,23,453',
-                          style: TextStyle(
-                            color: Colors.blue,
-                            fontSize: 30,
-                          ))
-                    ]),
+                    );
+                  },
+                
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: RichText(
+                  text: const TextSpan(
+                      text: 'Balance\n',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black87,
+                      ),
+                      children: [
+                        TextSpan(
+                            text: '£1,23,453',
+                            style: TextStyle(
+                              color: Colors.blue,
+                              fontSize: 30,
+                            ))
+                      ]),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 50),
@@ -109,24 +136,24 @@ class _MyHomePageState extends State<MyHomePage> {
                       ]),
                 ),
               ),
-              Padding(padding:const EdgeInsets.only(top: 30),
-             child: RichText(
-              text:const TextSpan(
-                text: 'Please Subscribe ', style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.black87,
-
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: RichText(
+                  text: const TextSpan(
+                      text: 'Please Subscribe ',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black87,
+                      ),
+                      children: [
+                        WidgetSpan(
+                            child: Icon(Icons.notifications_active_outlined,
+                                size: 30, color: Colors.blue),
+                            alignment: PlaceholderAlignment.middle)
+                      ]),
                 ),
-                children: [
-                  WidgetSpan(child: Icon( Icons.notifications_active_outlined, size: 30, color: Colors.blue),
-                  alignment:PlaceholderAlignment.middle
-                  )
-                ]
-              ),
-              ),
-             )
-            ]
-            ),
+              )
+            ]),
       ),
     );
   }
