@@ -69,28 +69,60 @@ class _MyHomePageState extends State<MyHomePage> {
             //         ),
 
             children: <Widget>[
-              Container(
-                width: 500,
-                height:500,
-                color: Colors.red,
-                child: Image.asset(
-                  'images/ade.jpg',
-                  fit: BoxFit.cover,
+              // Container(
+              //   width: 500,
+              //   height:500,
+              //   color: Colors.red,
+              //   child: Image.asset(
+              //     'images/ade.jpg',
+              //     fit: BoxFit.cover,
                   
-                  errorBuilder: (context, error, stackTrace) {
-                    return  Text('NO SUCH IMAGE!!!!',
-                    style: TextStyle(
-                      // color: Colors.red,
-                      fontSize: 20,
-                      // fontWeight: FontWeight.bold,
-                       foreground: Paint()
-                                         ..color = Colors.red
-                                        ..strokeWidth = 2
-                                        ..style = PaintingStyle.stroke
-                    ),
-                    );
-                  },
+              //     errorBuilder: (context, error, stackTrace) {
+              //       return  Text('NO SUCH IMAGE!!!!',
+              //       style: TextStyle(
+              //         // color: Colors.red,
+              //         fontSize: 20,
+              //         // fontWeight: FontWeight.bold,
+              //          foreground: Paint()
+              //                            ..color = Colors.red
+              //                           ..strokeWidth = 2
+              //                           ..style = PaintingStyle.stroke
+              //       ),
+              //       );
+              //     },
                 
+              //   ),
+              // ),
+              Container(
+                width: 300,
+                height: 300,
+                margin:const EdgeInsets.only(bottom: 50),
+                // decoration: BoxDecoration(
+                //   color: Colors.red,
+                //   image:const DecorationImage(image: AssetImage('images/ade.jpg'),
+                //   fit: BoxFit.cover
+                //   ),
+                // shape: BoxShape.circle,
+                // border: Border.all(width: 5, color: Colors.red)
+                // ),
+                decoration:const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.red,
+                  // gradient: RadialGradient(
+                  // //  center: Alignment.centerRight,
+                  //   colors:[
+                    
+                  //   Colors.red,
+                  //   Colors.black,
+                  //   Colors.green,
+                  // ])
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.green,
+                      blurRadius: 10,
+                      offset: Offset(10, 50),
+                    )
+                  ]
                 ),
               ),
               Padding(
