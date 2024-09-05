@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 width: 300,
                 height: 300,
-                margin:const EdgeInsets.only(bottom: 50),
+                margin:const EdgeInsets.only(bottom: 10),
                 // decoration: BoxDecoration(
                 //   color: Colors.red,
                 //   image:const DecorationImage(image: AssetImage('images/ade.jpg'),
@@ -116,13 +116,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   //   Colors.black,
                   //   Colors.green,
                   // ])
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.green,
-                      blurRadius: 10,
-                      offset: Offset(10, 50),
-                    )
-                  ]
+                 
                 ),
               ),
               Padding(
@@ -184,7 +178,35 @@ class _MyHomePageState extends State<MyHomePage> {
                             alignment: PlaceholderAlignment.middle)
                       ]),
                 ),
-              )
+              ),
+              Container(
+                height: 100,
+                color: Colors.black,
+
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Container(
+                      height: 50,
+                      width: 30,
+                      decoration: const BoxDecoration(
+                        color: Colors.red
+                      ),
+                    ),
+                      Container(
+                      height: 50,
+                      width: 30,
+                      decoration: const BoxDecoration(color: Colors.blue),
+                    ),
+                      Container(
+                      height: 50,
+                      width: 30,
+                      decoration: const BoxDecoration(color: Colors.green),
+                    )
+                  ],
+                ),
+              ),
             ]),
       ),
     );
