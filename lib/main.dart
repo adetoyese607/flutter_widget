@@ -203,21 +203,52 @@ class _MyHomePageState extends State<MyHomePage> {
 //               )
 //             ]),
 
-children: <Widget>[
-   Container(
-      width: double.infinity,
-      height: 200,
-      color: Colors.orange,
-    ),
-  Flexible(
-    fit: FlexFit.loose,
-    // flex: 1,
-    child: Container(
-      width: double.infinity,
-      height: 200,
-      color: Colors.green,
-    ),
-  )
+ children: <Widget>[
+  //  Flexible(
+  //    child: Container(
+  //       width: double.infinity,
+  //       height: 300,
+  //       color: Colors.orange,
+  //     ),
+  //  ),
+  //   const Spacer(flex: 1,),
+  // Flexible(
+  //   // fit: FlexFit.loose,
+  //   // flex: 1,
+  //   child: Container(
+  //     width: double.infinity,
+  //     height: 300,
+  //     color: Colors.green,
+  //   ),
+  // ),
+  //  const Spacer(flex: 2,),
+  //  Flexible(
+  //           child: Container(
+  //             width: double.infinity,
+  //             height: 300,
+  //             color: Colors.black,
+  //           ),
+  //         ),
+
+    Card(
+      color: Colors.red,
+      elevation: 10,
+      shadowColor: Colors.blue,
+      shape:const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+          // Radius.circular(20)
+          Radius.circular(20)
+        )
+      ),
+      child: 
+    Container(
+     
+      padding:const EdgeInsets.all(16.0),
+      child: Image.asset('images/ade.jpg', width: 300,
+      // height: 100,
+      )
+    ),),
+  
 ],
       ),
 
