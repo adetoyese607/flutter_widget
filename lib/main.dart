@@ -1,4 +1,4 @@
-import 'package:flutter/gestures.dart';
+// import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -40,202 +40,222 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            //   child:  Text.rich(
-            //     style: TextStyle(
-            //        fontSize: 20,
-            //             background: Paint()
-            //               ..color = Colors.blue
-            //               ..strokeWidth = 2
-            //               ..style = PaintingStyle.stroke
-            //     ),
-            // const    TextSpan(
-            //         text: 'I ',
+      body:
+       Column(
+//         child: Column(
+//             mainAxisAlignment: MainAxisAlignment.center,
+//             //   child:  Text.rich(
+//             //     style: TextStyle(
+//             //        fontSize: 20,
+//             //             background: Paint()
+//             //               ..color = Colors.blue
+//             //               ..strokeWidth = 2
+//             //               ..style = PaintingStyle.stroke
+//             //     ),
+//             // const    TextSpan(
+//             //         text: 'I ',
 
-            //         children: [
-            //           WidgetSpan(
-            //               child: Icon(
-            //             Icons.favorite_outline,
-            //             color: Colors.blue,
-            //           )),
-            //           TextSpan(
-            //             text: ' Flutter',
-            //           )
-            //         ]
-            //         )
-            //         ),
+//             //         children: [
+//             //           WidgetSpan(
+//             //               child: Icon(
+//             //             Icons.favorite_outline,
+//             //             color: Colors.blue,
+//             //           )),
+//             //           TextSpan(
+//             //             text: ' Flutter',
+//             //           )
+//             //         ]
+//             //         )
+//             //         ),
 
-            children: <Widget>[
-              // Container(
-              //   width: 500,
-              //   height:500,
-              //   color: Colors.red,
-              //   child: Image.asset(
-              //     'images/ade.jpg',
-              //     fit: BoxFit.cover,
+//             children: <Widget>[
+//               // Container(
+//               //   width: 500,
+//               //   height:500,
+//               //   color: Colors.red,
+//               //   child: Image.asset(
+//               //     'images/ade.jpg',
+//               //     fit: BoxFit.cover,
 
-              //     errorBuilder: (context, error, stackTrace) {
-              //       return  Text('NO SUCH IMAGE!!!!',
-              //       style: TextStyle(
-              //         // color: Colors.red,
-              //         fontSize: 20,
-              //         // fontWeight: FontWeight.bold,
-              //          foreground: Paint()
-              //                            ..color = Colors.red
-              //                           ..strokeWidth = 2
-              //                           ..style = PaintingStyle.stroke
-              //       ),
-              //       );
-              //     },
+//               //     errorBuilder: (context, error, stackTrace) {
+//               //       return  Text('NO SUCH IMAGE!!!!',
+//               //       style: TextStyle(
+//               //         // color: Colors.red,
+//               //         fontSize: 20,
+//               //         // fontWeight: FontWeight.bold,
+//               //          foreground: Paint()
+//               //                            ..color = Colors.red
+//               //                           ..strokeWidth = 2
+//               //                           ..style = PaintingStyle.stroke
+//               //       ),
+//               //       );
+//               //     },
 
-              //   ),
-              // ),
-              Container(
-                width: 300,
-                height: 300,
-                margin: const EdgeInsets.only(bottom: 10),
-                // decoration: BoxDecoration(
-                //   color: Colors.red,
-                //   image:const DecorationImage(image: AssetImage('images/ade.jpg'),
-                //   fit: BoxFit.cover
-                //   ),
-                // shape: BoxShape.circle,
-                // border: Border.all(width: 5, color: Colors.red)
-                // ),
-                decoration: const BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.red,
-                  // gradient: RadialGradient(
-                  // //  center: Alignment.centerRight,
-                  //   colors:[
+//               //   ),
+//               // ),
+//               Container(
+//                 width: 300,
+//                 height: 300,
+//                 margin: const EdgeInsets.only(bottom: 10),
+//                 // decoration: BoxDecoration(
+//                 //   color: Colors.red,
+//                 //   image:const DecorationImage(image: AssetImage('images/ade.jpg'),
+//                 //   fit: BoxFit.cover
+//                 //   ),
+//                 // shape: BoxShape.circle,
+//                 // border: Border.all(width: 5, color: Colors.red)
+//                 // ),
+//                 decoration: const BoxDecoration(
+//                   shape: BoxShape.circle,
+//                   color: Colors.red,
+//                   // gradient: RadialGradient(
+//                   // //  center: Alignment.centerRight,
+//                   //   colors:[
 
-                  //   Colors.red,
-                  //   Colors.black,
-                  //   Colors.green,
-                  // ])
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10),
-                child: RichText(
-                  text: const TextSpan(
-                      text: 'Balance\n',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black87,
-                      ),
-                      children: [
-                        TextSpan(
-                            text: '£1,23,453',
-                            style: TextStyle(
-                              color: Colors.blue,
-                              fontSize: 30,
-                            ))
-                      ]),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 50),
-                child: RichText(
-                  text: TextSpan(
-                      text: 'Don\'t have an account?',
-                      style: const TextStyle(
-                        fontSize: 20,
-                        color: Colors.black87,
-                      ),
-                      children: [
-                        TextSpan(
-                            text: ' Register',
-                            style: const TextStyle(
-                              color: Colors.orange,
-                              fontWeight: FontWeight.w500,
-                            ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                // ignore: avoid_print
-                                print('Lets get started');
-                              })
-                      ]),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 30),
-                child: RichText(
-                  text: const TextSpan(
-                      text: 'Please Subscribe ',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.black87,
-                      ),
-                      children: [
-                        WidgetSpan(
-                            child: Icon(Icons.notifications_active_outlined,
-                                size: 30, color: Colors.blue),
-                            alignment: PlaceholderAlignment.middle)
-                      ]),
-                ),
-              ),
+//                   //   Colors.red,
+//                   //   Colors.black,
+//                   //   Colors.green,
+//                   // ])
+//                 ),
+//               ),
+//               Padding(
+//                 padding: const EdgeInsets.only(top: 10),
+//                 child: RichText(
+//                   text: const TextSpan(
+//                       text: 'Balance\n',
+//                       style: TextStyle(
+//                         fontSize: 20,
+//                         color: Colors.black87,
+//                       ),
+//                       children: [
+//                         TextSpan(
+//                             text: '£1,23,453',
+//                             style: TextStyle(
+//                               color: Colors.blue,
+//                               fontSize: 30,
+//                             ))
+//                       ]),
+//                 ),
+//               ),
+//               Padding(
+//                 padding: const EdgeInsets.only(top: 50),
+//                 child: RichText(
+//                   text: TextSpan(
+//                       text: 'Don\'t have an account?',
+//                       style: const TextStyle(
+//                         fontSize: 20,
+//                         color: Colors.black87,
+//                       ),
+//                       children: [
+//                         TextSpan(
+//                             text: ' Register',
+//                             style: const TextStyle(
+//                               color: Colors.orange,
+//                               fontWeight: FontWeight.w500,
+//                             ),
+//                             recognizer: TapGestureRecognizer()
+//                               ..onTap = () {
+//                                 // ignore: avoid_print
+//                                 print('Lets get started');
+//                               })
+//                       ]),
+//                 ),
+//               ),
+//               Padding(
+//                 padding: const EdgeInsets.only(top: 30),
+//                 child: RichText(
+//                   text: const TextSpan(
+//                       text: 'Please Subscribe ',
+//                       style: TextStyle(
+//                         fontSize: 20,
+//                         color: Colors.black87,
+//                       ),
+//                       children: [
+//                         WidgetSpan(
+//                             child: Icon(Icons.notifications_active_outlined,
+//                                 size: 30, color: Colors.blue),
+//                             alignment: PlaceholderAlignment.middle)
+//                       ]),
+//                 ),
+//               ),
+// // Expanded(child: Text(data)),
+//               Container(
+//                 padding: const EdgeInsets.only(top: 20),
+//                 child:const Row(
+//                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+//                   children: <Widget>[
 
-              Container(
-                padding: const EdgeInsets.only(top: 20),
-                child:const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: <Widget>[
-
-                     FileOption(
-                      text: 'File Upload',
-                      iconData: Icons.file_upload_outlined,
-                       color: Colors.green
-                       ),
+//                      FileOption(
+//                       text: 'File Upload',
+//                       iconData: Icons.file_upload_outlined,
+//                        color: Colors.green
+//                        ),
                       
-                    FileOption(
-                        text: 'File Download',
-                        iconData: Icons.file_download_outlined,
-                        color: Colors.orange),
-                    //  const SizedBox(width: 10),
-                    // Column()
+//                     FileOption(
+//                         text: 'File Download',
+//                         iconData: Icons.file_download_outlined,
+//                         color: Colors.orange),
+//                     //  const SizedBox(width: 10),
+//                     // Column()
                   
-                  ],
-                ),
-              )
-            ]),
+//                   ],
+//                 ),
+//               )
+//             ]),
+
+children: <Widget>[
+   Container(
+      width: double.infinity,
+      height: 200,
+      color: Colors.orange,
+    ),
+  Flexible(
+    fit: FlexFit.loose,
+    // flex: 1,
+    child: Container(
+      width: double.infinity,
+      height: 200,
+      color: Colors.green,
+    ),
+  )
+],
       ),
+
+
     );
   }
 }
 
-class FileOption extends StatelessWidget {
-  final String text;
-  final IconData iconData;
-  final Color color;
-  const FileOption({
-    super.key, 
-    required this.text,
-     required this.iconData, 
-     required this.color,
-  });
+// class FileOption extends StatelessWidget {
+//   final String text;
+//   final IconData iconData;
+//   final Color color;
+//   const FileOption({
+//     super.key, 
+//     required this.text,
+//      required this.iconData, 
+//      required this.color,
+//   });
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        // ignore: sized_box_for_whitespace
-        Container(
-          width: 50,
-          height: 50,
-          decoration:
-              BoxDecoration(color: color.withOpacity(0.4), shape: BoxShape.circle),
-          child: Icon(
-          iconData,
-            color: color,
-          ),
-        ),
-       const SizedBox(height: 5),
-          Text(text),
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children: [
+//         // ignore: sized_box_for_whitespace
+//         Container(
+//           width: 50,
+//           height: 50,
+//           decoration:
+//               BoxDecoration(color: color.withOpacity(0.4), shape: BoxShape.circle),
+//           child: Icon(
+//           iconData,
+//             color: color,
+//           ),
+//         ),
+//        const SizedBox(height: 5),
+//           Text(text),
        
-      ],
-    );
-  }
-}
+//       ],
+//     );
+//   }
+// }
