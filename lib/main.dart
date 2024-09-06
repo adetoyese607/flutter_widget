@@ -1,4 +1,3 @@
-
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -76,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
               //   child: Image.asset(
               //     'images/ade.jpg',
               //     fit: BoxFit.cover,
-                  
+
               //     errorBuilder: (context, error, stackTrace) {
               //       return  Text('NO SUCH IMAGE!!!!',
               //       style: TextStyle(
@@ -90,13 +89,13 @@ class _MyHomePageState extends State<MyHomePage> {
               //       ),
               //       );
               //     },
-                
+
               //   ),
               // ),
               Container(
                 width: 300,
                 height: 300,
-                margin:const EdgeInsets.only(bottom: 10),
+                margin: const EdgeInsets.only(bottom: 10),
                 // decoration: BoxDecoration(
                 //   color: Colors.red,
                 //   image:const DecorationImage(image: AssetImage('images/ade.jpg'),
@@ -105,18 +104,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 // shape: BoxShape.circle,
                 // border: Border.all(width: 5, color: Colors.red)
                 // ),
-                decoration:const BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: Colors.red,
                   // gradient: RadialGradient(
                   // //  center: Alignment.centerRight,
                   //   colors:[
-                    
+
                   //   Colors.red,
                   //   Colors.black,
                   //   Colors.green,
                   // ])
-                 
                 ),
               ),
               Padding(
@@ -179,36 +177,65 @@ class _MyHomePageState extends State<MyHomePage> {
                       ]),
                 ),
               ),
-              Container(
-                height: 100,
-                color: Colors.black,
 
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
+              Container(
+                padding: const EdgeInsets.only(top: 20),
+                child:const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    Container(
-                      height: 50,
-                      width: 30,
-                      decoration: const BoxDecoration(
-                        color: Colors.red
-                      ),
-                    ),
-                      Container(
-                      height: 50,
-                      width: 30,
-                      decoration: const BoxDecoration(color: Colors.blue),
-                    ),
-                      Container(
-                      height: 50,
-                      width: 30,
-                      decoration: const BoxDecoration(color: Colors.green),
-                    )
+
+                     FileOption(
+                      text: 'File Upload',
+                      iconData: Icons.file_upload_outlined,
+                       color: Colors.green
+                       ),
+                      
+                    FileOption(
+                        text: 'File Download',
+                        iconData: Icons.file_download_outlined,
+                        color: Colors.orange),
+                    //  const SizedBox(width: 10),
+                    // Column()
+                  
                   ],
                 ),
-              ),
+              )
             ]),
       ),
+    );
+  }
+}
+
+class FileOption extends StatelessWidget {
+  final String text;
+  final IconData iconData;
+  final Color color;
+  const FileOption({
+    super.key, 
+    required this.text,
+     required this.iconData, 
+     required this.color,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        // ignore: sized_box_for_whitespace
+        Container(
+          width: 50,
+          height: 50,
+          decoration:
+              BoxDecoration(color: color.withOpacity(0.4), shape: BoxShape.circle),
+          child: Icon(
+          iconData,
+            color: color,
+          ),
+        ),
+       const SizedBox(height: 5),
+          Text(text),
+       
+      ],
     );
   }
 }
