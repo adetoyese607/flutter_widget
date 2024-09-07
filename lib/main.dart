@@ -55,31 +55,54 @@ class _MyHomePageState extends State<MyHomePage> {
           //         );
           //       }),
           // )
-     Stack(
-      clipBehavior: Clip.none,
-      children: <Widget>[
-        Image.asset('images/ade.jpg'
-       ),
-            Positioned(
-              left: MediaQuery.of(context).size.width/2 - 60,
-              bottom: -50,
-              child: Container(
-                        //  margin:const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                width: 100,
-                height: 100,
-                // margin: const EdgeInsets.symmetric(horizontal: 8),
-                decoration: BoxDecoration(
-                    //  color: Colors.red,
-                    shape: BoxShape.circle,
-                    // color: Colors.red,
-                   image:const DecorationImage(image: AssetImage('images/ade.jpg')),
-                    border: Border.all(color: Colors.white, width: 2),
-                    ),
-              ),
+     SizedBox(
+      // color: Colors.orange[200],
+      width: double.infinity,
+      height: 280,
+      child: Stack(
+       clipBehavior: Clip.none,
+        children: [
+         Image.asset('images/ade.jpg',
+         width: double.infinity,
+         fit: BoxFit.cover),
+         Align(
+        alignment: Alignment.bottomCenter,
+          child: Container(
+            padding:const EdgeInsets.all(16),
+            width: double.infinity,
+            color: Colors.black.withOpacity(0.4
             ),
-      
-      ],
-     )
+          
+            child:const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                'Adetoyese Samson',
+                style: TextStyle(fontSize: 18, color: Colors.white),
+                ),
+                // Spacer(he),
+                SizedBox(height: 4),
+                Text(
+                  'Professional Google Dev',
+                  style: TextStyle(fontSize: 13, color: Colors.white),
+                )
+              ],
+            ) ,
+          ),
+         ),
+         const Positioned(
+          bottom: -24,
+          right: 50,
+          child: CircleAvatar(
+            backgroundColor: Colors.black,
+            radius: 25,
+            child: Icon(Icons.favorite, color: Colors.white,),
+          )
+          )
+        ],
+      ),
+    )
 
     );
   }
