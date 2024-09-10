@@ -64,7 +64,29 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
          Image.asset('images/ade.jpg',
          width: double.infinity,
-         fit: BoxFit.cover),
+         fit: BoxFit.cover
+         ),
+   
+      const   Align(
+        alignment: Alignment.topCenter,
+           child:  SizedBox(
+             child: CircleAvatar(
+              radius: 90,
+              backgroundColor: Colors.grey,
+              child: CircleAvatar(
+               
+                backgroundColor: Colors.white,
+                radius: 85,
+                child: CircleAvatar(
+                  radius: 82,
+                   backgroundImage: AssetImage('images/ade.jpg'),
+                ),
+              ),
+             
+              ),
+           ),
+         ),
+         
          Align(
         alignment: Alignment.bottomCenter,
           child: Container(
@@ -79,13 +101,14 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Text(
                 'Adetoyese Samson',
-                style: TextStyle(fontSize: 18, color: Colors.white),
+                style: TextStyle(fontSize: 18, color: Colors.white, backgroundColor: Colors.red),
                 ),
                 // Spacer(he),
                 SizedBox(height: 4),
+                
                 Text(
                   'Professional Google Dev',
-                  style: TextStyle(fontSize: 13, color: Colors.white),
+                  style: TextStyle(fontSize: 13, color: Colors.white, backgroundColor: Colors.blue),
                 )
               ],
             ) ,
