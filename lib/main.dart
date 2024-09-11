@@ -67,25 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
          fit: BoxFit.cover
          ),
    
-      const   Align(
-        alignment: Alignment.topCenter,
-           child:  SizedBox(
-             child: CircleAvatar(
-              radius: 90,
-              backgroundColor: Colors.grey,
-              child: CircleAvatar(
-               
-                backgroundColor: Colors.white,
-                radius: 85,
-                child: CircleAvatar(
-                  radius: 82,
-                   backgroundImage: AssetImage('images/ade.jpg'),
-                ),
-              ),
-             
-              ),
-           ),
-         ),
+    
          
          Align(
         alignment: Alignment.bottomCenter,
