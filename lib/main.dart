@@ -41,108 +41,23 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
       ),
       body: 
-        
-          // Container(
-          //   padding: const EdgeInsets.all(24),
-          //   // color: Colors.black,
-          //   child: ListView.builder(
-          //       itemCount: 5,
-          //       scrollDirection: Axis.horizontal,
-          //       itemBuilder: (context, index) {
-          //         return Align(
-          //           widthFactor: 0.4,
-                   
-          //         );
-          //       }),
-          // )
-     SizedBox(
-      // color: Colors.orange[200],
-      width: double.infinity,
-      height: 280,
-      child: Stack(
-       clipBehavior: Clip.none,
-        children: [
-         Image.asset('images/ade.jpg',
-         width: double.infinity,
-         fit: BoxFit.cover
-         ),
-   
-    
-         
-         Align(
-        alignment: Alignment.bottomCenter,
-          child: Container(
-            padding:const EdgeInsets.all(16),
-            width: double.infinity,
-            color: Colors.black.withOpacity(0.4
-            ),
-          
-            child:const Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-              children: [
-                Text(
-                'Adetoyese Samson',
-                style: TextStyle(fontSize: 18, color: Colors.white, backgroundColor: Colors.red),
-                ),
-                // Spacer(he),
-                SizedBox(height: 4),
-                
-                Text(
-                  'Professional Google Dev',
-                  style: TextStyle(fontSize: 13, color: Colors.white, backgroundColor: Colors.blue),
-                )
-              ],
-            ) ,
+       ListView(
+        children:const <Widget>[
+        ExpansionTile(
+          leading: CircleAvatar(
+            backgroundImage: AssetImage('images/ade.jpg'),   
           ),
-         ),
-         const Positioned(
-          bottom: -24,
-          right: 50,
-          child: CircleAvatar(
-            backgroundColor: Colors.black,
-            radius: 25,
-            child: Icon(Icons.favorite, color: Colors.white,),
-          )
+          title: Text('Adetoyese Samson'),
+          children: [
+            Text('Hello, I am a Student of FUTA studying Project Management, with an experience in App Development'),
+            Icon(Icons.thumb_up)
+          ],
           )
         ],
-      ),
-    )
+       )
+   
 
     );
   }
 }
 
-// class FileOption extends StatelessWidget {
-//   final String text;
-//   final IconData iconData;
-//   final Color color;
-//   const FileOption({
-//     super.key, 
-//     required this.text,
-//      required this.iconData, 
-//      required this.color,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       children: [
-//         // ignore: sized_box_for_whitespace
-//         Container(
-//           width: 50,
-//           height: 50,
-//           decoration:
-//               BoxDecoration(color: color.withOpacity(0.4), shape: BoxShape.circle),
-//           child: Icon(
-//           iconData,
-//             color: color,
-//           ),
-//         ),
-//        const SizedBox(height: 5),
-//           Text(text),
-       
-//       ],
-//     );
-//   }
-// }
